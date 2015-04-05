@@ -11,7 +11,7 @@ public class EventListener implements Listener {
 		if (event.getEntity() instanceof Monster){ // If entity is a monster
 			Monster monster = (Monster) event.getEntity();
 			if (monster.getHealth() == 0){ // If Monster is 0 health (Invincible)
-				monster.remove(); // Remove it.
+				monster.remove(); // Remove it
 			}
 		}
 	}

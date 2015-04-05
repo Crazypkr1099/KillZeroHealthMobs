@@ -7,11 +7,11 @@ import org.bukkit.event.entity.EntityDamageEvent;
 
 public class EventListener implements Listener {
 	@EventHandler
-	public void monsterSpawn(EntityDamageEvent event){
-		if (event.getEntity() instanceof Monster){
+	public void monsterSpawn(EntityDamageEvent event){ // Method for checking entity damage
+		if (event.getEntity() instanceof Monster){ // If entity is a monster
 			Monster monster = (Monster) event.getEntity();
-			if (monster.getHealth() == 0){
-				monster.remove();
+			if (monster.getHealth() == 0){ // If Monster is 0 health (Invincible)
+				monster.remove(); // Remove it.
 			}
 		}
 	}
